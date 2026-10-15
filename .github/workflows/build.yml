@@ -21,7 +21,7 @@ jobs:
         with:
               packages: 'platform-tools platforms;android-35 build-tools;35.0.0'
       - name: Accept Android SDK licenses
-        run: yes | sdkmanager --licenses
+        run: yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses
       - name: Build APK
         run: |
           unzip -o Saansh_Android_Studio_Project.zip -d source
